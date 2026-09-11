@@ -28,4 +28,14 @@
   render('employee');
   document.querySelector('[data-product-expand]').textContent='Original screen ↗';
   document.querySelector('.product-note').textContent='Adapted interface previews with illustrative data. Open the original development screen to explore the source interface.';
+  const interbeingPanel = document.querySelector('.bridge-mark');
+  if (interbeingPanel) {
+    interbeingPanel.classList.add('bridge-link');
+    const interbeingLink = document.createElement('a');
+    interbeingLink.className = 'bridge-card-link';
+    interbeingLink.href = 'https://interbeingleadership.com/';
+    interbeingLink.setAttribute('aria-label', 'Explore the InterBeing website');
+    interbeingLink.innerHTML = '<span class="bridge-corner" aria-hidden="true">↗</span>';
+    interbeingPanel.append(interbeingLink);
+  }
 })();
